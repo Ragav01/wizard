@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Wizard</title>
+</head>
+
+
+<body>
+    <div class="center">
+        <nav class="off">
+            <ul>
+                <li class="on" id="iconOne">
+                    <i class="fas fa-user-alt"></i>
+                </li>
+                <li class="off" id="iconTwo">
+                    <i class="fas fa-map-marker-alt"></i>
+                </li>
+                <li class="off" id="iconThree">
+                    <i class="fas fa-graduation-cap"></i>
+                </li>
+                <li class="off" id="iconFour">
+                    <i class="fas fa-briefcase"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="container off">
+            <form method="GET" onsubmit="return processForm()" autocomplete="off">
+                <div id="stageOne">
+                    <h2>Basic Details</h2>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="firstname">
+                                First Name <small id="firstnameError">(required)</small>
+                            </label>
+                            <input type="text" placeholder="Adam" name="firstname" id="firstname">
+                            <label for="lastname">
+                                Last Name <small id="lastnameError">(required)</small>
+                            </label>
+                            <input type="text" placeholder="Jarman" name="lastname" id="lastname">
+                        </div>
+                        <div class="col-6">
+                            <div class="img-output">
+                                <input type="file" id="file" accept="image/*" onchange="loadFile(event)">
+                                <label for="file" />
+                                <img id="output" src="img/ava.jpg" />
+                                </label>
+                            </div>
+                            <p>Choosh Picture</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email">Email <small id="emailError">(required)</small></label>
+                            <input type="text" placeholder="Adam@mail.com" name="email" id="email">
+                        </div>
+
+                    </div>
+                    <div class="col d-flex-end">
+                        <div class="btn Next" onclick="processStageOne()">Next</div>
+                    </div>
+                </div>
+
+                <div id="stageTwo">
+                    <h2>Address Details</h2>
+                    <div class="row">
+                        <div class="col">
+                            <label for="adOne">Address</label>
+                            <input type="text" placeholder="5th Avenue..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <label for="ct">City</label>
+                            <input type="text" placeholder="Colombo">
+                        </div>
+                        <div class="col-2">
+                            <label for="cu">Country</label>
+                            <input type="text" placeholder="Sri Lanka">
+                        </div>
+                    </div>
+
+                    <div class="col d-flex-end">
+                        <div class="btn Next" onclick="processStageTwo()">Next</div>
+                        <div class="btn Pre" onclick="processPreStageOne()">Prev</div>
+                    </div>
+                </div>
+                <div id="stageThree">
+                    <h2>What are you doing</h2>
+                    <div class="row">
+                        <div class="check">
+                            <label>
+                                <input type="checkbox" name="design" />
+                                <div>
+                                    <i class="fas fa-paint-roller"></i><br>
+                                    <b>Design</b>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="code" />
+                                <div>
+                                    <i class="fas fa-code"></i><br>
+                                    <b>Code</b>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="develop" />
+                                <div>
+                                    <i class="far fa-star"></i><br>
+                                    <b>Develop</b>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col d-flex-end">
+                        <div class="btn Next" onclick="processStageThree()">Next</div>
+                        <div class="btn Pre" onclick="processPreStageTwo()">Prev</div>
+                    </div>
+                </div>
+
+                <div id="stageFour">
+                    <h2>Work Details</h2>
+                    <div class="row">
+                        <div class="col">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="UI Engineer">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <label>Length of Work</label>
+                            <input type="text" placeholder="5 Years..">
+                        </div>
+                        <div class="col-2">
+                            <label>Work hours</label>
+                            <input type="text" placeholder="Full Time">
+                        </div>
+                    </div>
+                    <div class="col d-flex-end">
+                        <div class="btn Next" onclick="processStageFour()">Next</div>
+                        <div class="btn Pre" onclick="processPreStageThree()">Prev</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

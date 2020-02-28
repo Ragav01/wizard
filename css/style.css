@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+
+body {
+  background-color: #ebecf0;
+  font-family: "Josefin sans";
+}
+h2 {
+  padding: 0;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #61677c;
+  margin-bottom: 50px;
+}
+p {
+  color: #61677c;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.off {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.on {
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+}
+.center {
+  display: flex;
+  height: 500px;
+  width: 1050px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+nav {
+  height: 100%;
+  width: 120px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  color: #bebebe;
+  font-size: 22px;
+  width: 70px;
+  height: 70px;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+#iconOne {
+  color: #fdd700;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 20px 70px;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+.col-6 {
+  width: 50%;
+  margin: 0 auto;
+}
+.col-8 {
+  width: 80%;
+  margin-right: 5%;
+}
+.col {
+  width: 100%;
+}
+.d-flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+span {
+  color: #ff3b2d;
+  padding: 10px;
+  display: block;
+}
+
+.img-output {
+  border-radius: 50%;
+  padding: 8px;
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  border: 2px solid #fff;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.img-output img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[type="file"] + label {
+  cursor: pointer;
+}
+
+input{
+  margin: 10px 0 30px 0;  
+  border: 0;
+  color: #61677c;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 10px;
+  background: #ebecf0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+::placeholder{
+  color: #babecc;
+}
+.check {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.check label input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+label div {
+  cursor: pointer;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  color: #bebebe;
+  border-radius: 20px;
+  margin: 0 10px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  text-align: center;
+}
+label div i {
+  font-size: 35px;
+  margin: 30px 0;
+}
+label div b {
+  font-size: 21px;
+  font-weight: 400;
+}
+.check label input[type="checkbox"]:hover ~ div {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.check label input[type="checkbox"]:checked ~ div {
+  color: #b700ff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.btn:active {
+  border: 0;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.Next {
+  right: 60px;
+}
+.Pre {
+  right: 180px;
+}
+#stageTwo,
+#stageThree,
+#stageFour {
+  display: none;
+}
